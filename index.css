@@ -1,0 +1,39 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: fantasy;
+  background-color: black;
+  text-align: center;
+}
+
+.Title {
+  font-size: 48px;
+  margin-top: 10vh;
+}
+
+#Outcome, #Score {
+  font-size: 50px;
+  margin-top: 5vh;
+  height: 5vh;
+}
+
+
+.play-buttons {
+  margin: auto;
+  height: 50vh;
+  width: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  font-size: 24px;
+  color:black;
+}
