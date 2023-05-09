@@ -63,7 +63,7 @@ function updateDisplay(Outcome) {
   switch (Outcome) {
     case "win" :
       displayOutcome.textContent = "Congrats, You Have Won this round!";
-      setTimeout(() => { displayOutcome.textContent = "" }, 1000);
+      hideDisplay();
       break;
     case "lose" :
       displayOutcome.textContent = "Unfortunately, You Have Lost this round!";
