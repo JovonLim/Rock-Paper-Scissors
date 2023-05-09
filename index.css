@@ -15,17 +15,32 @@ body {
 #Outcome, #Score {
   font-size: 50px;
   margin-top: 5vh;
+  margin-bottom: 5vh;
   height: 5vh;
 }
 
 
 .play-buttons {
   margin: auto;
-  height: 50vh;
-  width: 50vh;
+  height: 30vh;
+  width: 90vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+img {
+  width:150px;
+  height:150px;
+}
+
+#resetBtn {
+  border-radius: 8px;
+  margin-top: 15vh;
+  font-size: 20px;
+  font-family: fantasy;
+  width: 150px;
+  height: 60px;
 }
 
 .Footer {

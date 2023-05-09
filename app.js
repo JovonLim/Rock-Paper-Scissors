@@ -4,8 +4,9 @@ const paperBtn = document.querySelector('#paperBtn');
 const resetBtn = document.querySelector('#resetBtn');
 const displayOutcome = document.querySelector('#Outcome');
 const displayScore = document.querySelector('#Score');
-
+let prevTimeoutId, curTimeoutId;
 let playerScore = 0, computerScore = 0;
+
 updateScore();
 
 rockBtn.addEventListener('click', () => {
@@ -22,7 +23,7 @@ paperBtn.addEventListener('click', () => {
 
 resetBtn.addEventListener('click', () => {
   playerScore = 0, computerScore = 0;
-  console.log("Scores Resetted");
+  updateDisplay("reset");
   updateScore();
 })
 
@@ -72,10 +73,16 @@ function updateDisplay(Outcome) {
       displayOutcome.textContent = "Unlucky, it was a Draw!";
       hideDisplay();
       break;
+    case "reset" :
+      displayOutcome.textContent = "The scores have been resetted!";
+      hideDisplay();
+      break;
   }
   return;
 }
 
 function hideDisplay() {
-  setTimeout(() => { displayOutcome.style.visibility = "hidden" }, 1000);
+  prevTimeoutId = curTimeoutId;
+  clearTimeout(prevTimeoutId);
+  curTimeoutId = setTimeout(() => { displayOutcome.style.visibility = "hidden" }, 2000);
 }
